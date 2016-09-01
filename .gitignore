@@ -1,7 +1,0 @@
-_site
-.sass-cache
-.jekyll-metadata
-
-_sass/_layout.scss
-
-_includes/header.html
