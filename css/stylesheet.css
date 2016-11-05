@@ -1,0 +1,14 @@
+.bigbeer {
+    background-image: url(../pics/jumbobeer.jpg);
+    background-size: cover;
+}
+
+.hvittext {
+    color:whitesmoke;
+}
+
+#map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+}
