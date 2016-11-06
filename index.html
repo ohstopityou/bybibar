@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="icon" type="image/png" href="pics/icon.png">
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/stylesheet.css">
         <!-- Latest compiled and minified CSS -->
@@ -10,7 +9,7 @@
         <!-- Optional theme -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
         
-        <title>ByBiBar by Thomas</title>
+        <title>Testpage</title>
     </head>
     <body>
         <header>
@@ -19,8 +18,101 @@
                 <div class="navbar-header">
                   <a class="navbar-brand" href="#">Byens Billigste Bar</a>
                 </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav navbar-right">
+
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Barer <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div><!-- /.navbar-collapse -->
             </div>
             </nav>
         </header>
+        
+        <div class="jumbotron bigbeer">
+          <div class="container hvittext">
+          <h1>Kveldens Billigste Bar:</h1>
+          <p><a class="btn btn-success btn-lg" href="#" role="button">Kvarteret</a></p>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+        <table class="table">
+          <tbody>
+            <tr>
+                <th>Navn</th>
+                <th>Pris pr øl</th> 
+            </tr>
+            <tr>
+                <td>Kvarteret</td>
+                <td>47</td> 
+            </tr>
+            <tr>
+                <td>Febar</td>
+                <td>69</td> 
+            </tr>
+            <tr>
+                <td>Brukbar</td>
+                <td>90</td> 
+            </tr>
+                          <tr>
+                <td>Kvarteret</td>
+                <td>47</td> 
+            </tr>
+            <tr>
+                <td>Febar</td>
+                <td>69</td> 
+            </tr>
+            <tr>
+                <td>Brukbar</td>
+                <td>90</td> 
+            </tr>
+                          <tr>
+                <td>Kvarteret</td>
+                <td>47</td> 
+            </tr>
+            <tr>
+                <td>Febar</td>
+                <td>69</td> 
+            </tr>
+            <tr>
+                <td>Brukbar</td>
+                <td>90</td> 
+            </tr>
+           </tbody>
+        </table>
+                </div>
+        </div>
+            <div id="map">Google maps goes here</div>
+            <script>
+              function initMap() {
+                var uluru = {lat: 60.389614, lng: 5.322187};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 14,
+                  center: uluru
+                });
+                var marker = new google.maps.Marker({
+                  position: uluru,
+                  map: map
+                });
+              }
+            </script>
+            <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwXNdRrn3e5i2y_CtZdqSE6sXSchlnhUc&callback=initMap">
+            </script>
+        
+        
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </body>
 </html>

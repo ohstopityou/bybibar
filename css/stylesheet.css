@@ -1,6 +1,14 @@
-body {
-    background-image: url(../pics/background.jpg);
+.bigbeer {
+    background-image: url(../pics/jumbobeer.jpg);
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+}
+
+.hvittext {
+    color:whitesmoke;
+}
+
+#map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
 }
