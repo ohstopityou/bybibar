@@ -12,20 +12,24 @@
      <img src="images/menu-icon.png" id="rightMenuButton">
     </header>
     <div class="container">
-    <div id="rightMenu" style="display: none">
-        <div class="menu">
-         <ul>
-          <li onclick="toggleMarker(fotball)">Fotballen</li>
-          <li onclick="toggleMarker(bryggen)">Bryggen</li>
-          <li onclick="toggleBlur(map)">infoCard</li>
-         </ul>
-        </div>
-    </div>
-    <div class="cards-container">
-      <div class="card" id="bryggenCard" style="display: none">Info</div>
+    
+    <div class="map-overlay-wrapper">
+      <div id="rightMenu" style="display: none">
+      <div class="menu">
+       <ul>
+        <li onclick="toggleMarker(fotball)">Fotballen</li>
+        <li onclick="toggleMarker(bryggen)">Bryggen</li>
+        <li onclick="toggleBlur(map)">infoCard</li>
+       </ul>
+      </div>
+      </div>
+      <div class="map-overlay" id="map-overlay">
+        <div class="card" id="bryggenCard" style="display: none">Info</div>
+      </div>
     </div>
     
     <div id="map" style="blur(0px)"></div>
+    
     <script src="js/maps.js"></script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwXNdRrn3e5i2y_CtZdqSE6sXSchlnhUc&callback=initMap">

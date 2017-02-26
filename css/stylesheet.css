@@ -10,12 +10,21 @@ a {
 }
 
 .container {
-  position: relative;
   height: 100%;
+  width: 100%;
 }
 
-.fullwidth {
-  padding-right: 0px;
+.right {
+    height:200px;
+    width:200px;
+    background:blue;
+    float:right;
+}
+.left {
+    width:auto;
+    height:200px;
+    background:red;
+    overflow:hidden;
 }
 
 /* -------hide cc-------- */
@@ -67,34 +76,36 @@ header {
 /* ------------main-------------- */
 
 #map {
+  z-index: -1;
   height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 #rightMenu {
-  z-index: 99;
-  position: fixed;
   text-align: center;
-  top: 60px;
-  right: 0px;
   width: 250px;
   background: rgba(54, 25, 25, .75);
-  height: 100%;
   border-left: 1px solid black;
+  float: right;
+  height: 100%;
 }
 
 /* ------------cards------------- */
 
-.cards-container{
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  min-width: 400px;
-  max-width: 1200px;
-  justify-content: space-around;
-  flex-wrap: wrap;
+.map-overlay-wrapper {
+  padding-top: 60px;
   box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.map-overlay{
+  width: auto;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+  height: 100%;
 }
 
 .card {
@@ -110,7 +121,6 @@ header {
   height: 300px;
   width: 300px;
   z-index: 100;
-  top: 300px;
   text-align: center;
   line-height: 300px;
 }
@@ -122,10 +132,6 @@ header {
 }
 
 @media only screen and (min-width : 1200px) {
-  
-  .card-wrapper {
-   max-width: 580px; /* 1200/2 minus margin */
-  }
   
   .fullwidth {
     max-width: 1200px;

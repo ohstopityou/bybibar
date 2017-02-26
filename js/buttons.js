@@ -1,5 +1,6 @@
 var btn = document.getElementById('rightMenuButton');
 var map = document.getElementById('map').style;
+var mapoverlay = document.getElementById('map-overlay').style;
                    
 function toggleVisible(id) {
 var style = document.getElementById(id).style;
@@ -30,5 +31,7 @@ function toggleMarker(id) {
 btn.addEventListener("click", function() {
   toggleVisible('rightMenu');
 });
+
+//mapoverlay.addEventListener("click", toggleBlur(map));
 
 //bryggen.addListener('click', toggleVisible('bryggenCard'));
