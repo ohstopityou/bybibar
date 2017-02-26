@@ -54,22 +54,8 @@ header {
   display: block;
 }
 
-/* ------clickboxes------- */
-
-.button {
-  background-color: green;
-  border: none;
-  color: white;
-  padding: 15px 30px;
-  text-align: center;
-  text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
-
-.button:hover, .menu a:hover{
-  background-color: darkslategrey;
+#rightMenuButton {
+  height: 60px;
 }
 
 /* ------------main-------------- */
