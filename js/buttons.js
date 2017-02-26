@@ -3,6 +3,7 @@ var map = document.getElementById('map');
 
                    
 function toggleVisible(id) {
+  console.log(id);
 var style = document.getElementById(id).style;
   if (style.display=='block'){
     style.display='none'
@@ -12,7 +13,7 @@ var style = document.getElementById(id).style;
 }
 
 function toggleBlur(id) {
-  if (id.style.filter=="blur(4px)") {
+  if (id.style.filter==blur(4px)) {
     id.style.filter="blur(0px)";
   } else {
     id.style.filter="blur(4px)";
