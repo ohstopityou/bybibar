@@ -1,9 +1,9 @@
 /* --------basic--------- */
 
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent;} body {line-height: 1;}ol, ul{list-style:none;} blockquote, q{quotes:none;} blockquote:before, blockquote:after, q:before, q:after{content:'';content:none;} :focus{outline:0;} ins{text-decoration:none;} del{text-decoration:line-through;} table{border-collapse:collapse; border-spacing:0;}
+
 html, body {
   height: 100%; width: 100%; margin: 0; padding: 0; 
-  font-size: 1.05em;
-  line-height: 1.25em;
 }
 
 a {
@@ -12,20 +12,7 @@ a {
 
 .container {
   height: 100%;
-  width: 100%;
-}
-
-.right {
-    height:200px;
-    width:200px;
-    background:blue;
-    float:right;
-}
-.left {
-    width:auto;
-    height:200px;
-    background:red;
-    overflow:hidden;
+  min-width: 100%;
 }
 
 /* -------hide cc-------- */
@@ -35,10 +22,6 @@ a {
 /* --------header--------- */
 
 header {
-  display: flex;
-  justify-content: center;
-  padding: 0 15px;
-  margin: 0 auto;
   position: fixed;
   border-bottom: 1px solid black;
   height: 3.5em;
@@ -47,12 +30,13 @@ header {
   left: 0;
   right: 0;
   background: rgba(54, 25, 25, .75);
+  text-align: center;
 }
 
 #pagetitle {
   font-size: 2em;
-  line-height: 60px;
-  padding: 0 10px;
+  line-height: 1.75em;
+  padding: 0 15px;
 }
 
 #rightMenuButton {
@@ -62,14 +46,11 @@ header {
 }
 
 .menu ul {
-  margin: 0;
-  padding: 0;
   list-style-type: none;
 }
 
 .menu li {
   line-height: 30px;
-  display: block;
   margin-top: 10px;
   background-color: orange;
 }
@@ -120,7 +101,6 @@ header {
 }
 
 #bryggenCard {
-  position: absolute;
   height: 300px;
   width: 300px;
   z-index: 10;
@@ -131,12 +111,7 @@ header {
 /*------media query--------*/
 
 @media only screen and (max-width : 640px) {
-
-}
-
-@media only screen and (min-width : 1200px) {
-  
-  .fullwidth {
-    max-width: 1200px;
+  header {
+    text-align: left;
   }
 }
