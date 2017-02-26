@@ -1,0 +1,159 @@
+/* --------basic--------- */
+
+html, body {
+  height: 100%; width: 100%; margin: 0; padding: 0; 
+  background: #e1e1;
+}
+
+a {
+  text-decoration: none; font-weight: bold; color: limegreen;
+}
+
+.container {
+  position: relative;
+  height: 100%;
+}
+
+.stretchdiv {
+  flex: 1;
+}
+
+.fullwidth {
+  padding-right: 0px;
+}
+
+/* -------hide cc-------- */
+
+.gm-style-cc { display:none; }
+
+/* --------header--------- */
+
+.top-header {
+  position: fixed;
+  border-bottom: 1px solid black;
+  height: 60px;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(54, 25, 25, .75);
+}
+
+header {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+#pagetitle {
+  font-size: 35px;
+  line-height: 60px;
+  padding: 0 10px;
+  display: block;
+}
+
+/* ------clickboxes------- */
+
+.button {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.button:hover, .menu a:hover{
+  background-color: darkslategrey;
+}
+
+/* ------------main-------------- */
+
+#map {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#rightMenu {
+  z-index: 99;
+  position: absolute;
+  text-align: center;
+  top: 60px;
+  right: 0px;
+  width: 250px;
+  background-color: darkblue;
+  padding-bottom: 5px;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.menu a {
+  line-height: 30px;
+  display: block;
+  margin-top: 5px;
+  background-color: green;
+}
+
+/* ------------cards------------- */
+
+.cards-container{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  min-width: 400px;
+  max-width: 1200px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.card-wrapper {
+  max-width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.card {
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  padding: 10px;
+  width: 100%;
+}
+
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.12);
+}
+
+.cardtitle{
+  margin: 15px 0 5px;
+}
+
+/*------media query--------*/
+
+@media only screen and (max-width : 640px) {
+    
+}
+
+@media only screen and (min-width : 1200px) {
+  
+  .card-wrapper {
+   max-width: 580px; /* 1200/2 minus margin */
+  }
+  
+  .fullwidth {
+    max-width: 1200px;
+  }
+}

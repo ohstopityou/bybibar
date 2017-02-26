@@ -1,0 +1,93 @@
+/* --------basic--------- */
+
+html, body {
+  height: 100%; width: 100%; margin: 0; padding: 0; 
+  background: #e1e1;
+}
+
+a {
+  text-decoration: none; font-weight: bold; color: limegreen;
+}
+
+.container {
+  position: relative;
+  height: 100%;
+}
+
+.stretchdiv {
+  flex: 1;
+}
+
+/* --------header--------- */
+
+.top-header {
+  position: fixed;
+  border-bottom: 1px solid black;
+  height: 60px;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(54, 25, 25, .75);
+}
+
+header {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+#pagetitle {
+  font-size: 35px;
+  line-height: 60px;
+  padding: 0 10px;
+  display: block;
+}
+
+/* ------clickboxes------- */
+
+.button {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.button:hover, .menu a:hover{
+  background-color: darkslategrey;
+}
+
+/* ------------main-------------- */
+
+
+#rightMenu {
+  display: block;
+  z-index: 99;
+  position: absolute;
+  text-align: center;
+  top: 60px;
+  right: 0px;
+  width: 200px;
+  height: 500px;
+  background-color: darkblue;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.menu a {
+  line-height: 30px;
+  display: block;
+  margin-top: 5px;
+  background-color: green;
+}
