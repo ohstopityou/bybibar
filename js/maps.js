@@ -19,7 +19,6 @@ function initMap() {
   },
   {
     "featureType": "poi",
-    "elementType": "labels.text",
     "stylers": [
       {
         "visibility": "off"
@@ -27,10 +26,11 @@ function initMap() {
     ]
   },
   {
-    "featureType": "poi.business",
+    "featureType": "poi",
+    "elementType": "geometry",
     "stylers": [
       {
-        "visibility": "off"
+        "visibility": "on"
       }
     ]
   },
@@ -45,6 +45,23 @@ function initMap() {
   },
   {
     "featureType": "road.local",
+    "elementType": "labels",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "stylers": [
+      {
+        "visibility": "simplified"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
     "elementType": "labels",
     "stylers": [
       {
