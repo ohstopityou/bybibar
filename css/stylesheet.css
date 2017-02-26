@@ -14,10 +14,6 @@ a {
   height: 100%;
 }
 
-.stretchdiv {
-  flex: 1;
-}
-
 .fullwidth {
   padding-right: 0px;
 }
@@ -28,7 +24,11 @@ a {
 
 /* --------header--------- */
 
-.top-header {
+header {
+  display: flex;
+  justify-content: center;
+  padding: 0 15px;
+  margin: 0 auto;
   position: fixed;
   border-bottom: 1px solid black;
   height: 60px;
@@ -39,23 +39,16 @@ a {
   background: rgba(54, 25, 25, .75);
 }
 
-header {
-  max-width: 1200px;
-  display: flex;
-  align-items: center;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
 #pagetitle {
   font-size: 35px;
   line-height: 60px;
   padding: 0 10px;
-  display: block;
 }
 
 #rightMenuButton {
   height: 60px;
+  position: absolute;
+  right: 15px;
 }
 
 /* ------------main-------------- */
@@ -68,13 +61,14 @@ header {
 
 #rightMenu {
   z-index: 99;
-  position: absolute;
+  position: fixed;
   text-align: center;
   top: 60px;
   right: 0px;
   width: 250px;
-  background-color: darkblue;
-  padding-bottom: 5px;
+  background: rgba(54, 25, 25, .75);
+  height: 100%;
+  border-left: 1px solid black;
 }
 
 .menu ul {
@@ -83,11 +77,11 @@ header {
   list-style-type: none;
 }
 
-.menu a {
+.menu li {
   line-height: 30px;
   display: block;
-  margin-top: 5px;
-  background-color: green;
+  margin-top: 10px;
+  background-color: limegreen;
 }
 
 /* ------------cards------------- */
