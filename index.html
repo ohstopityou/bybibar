@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-   <title>Byens Billigste bar</title>
+   <title>Byens Billigste Bar</title>
    <link rel="icon" type="image/png" href="images/beer-icon.png">
    <meta charset="UTF-8">
    <link rel="stylesheet" href="css/stylesheet.css">
  </head>
   <body>
-    <div class="top-header">
-     <header>
-      <a href="#" id="pagetitle">ByensBilligsteBar</a>
-      <img src="images/menu-icon.png" id="rightMenuButton">
-     </header>
-    </div>
+    <header>
+     <a href="#" id="pagetitle">Byens Billigste Bar</a>
+     <img src="images/menu-icon.png" id="rightMenuButton">
+    </header>
     <div class="container">
     <div id="rightMenu" style="display: none">
         <div class="menu">
          <ul>
-          <li onclick="toggleMarker(fotballen)">Fotballen</li>
+          <li onclick="toggleMarker(fotball)">Fotballen</li>
           <li onclick="toggleMarker(bryggen)">Bryggen</li>
+          <li onclick="toggleBlur(map)">infoCard</li>
          </ul>
         </div>
     </div>
-    <div id="map"></div>
-    <script src="js/script.js"></script>
+    <div class="cards-container">
+      <div class="card" id="bryggenCard" style="display: none">Info</div>
+    </div>
+    
+    <div id="map" style="blur(0px)"></div>
+    <script src="js/maps.js"></script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwXNdRrn3e5i2y_CtZdqSE6sXSchlnhUc&callback=initMap">
     </script>
+    <script src="js/buttons.js"></script>
     </div>
   </body>
 </html>
