@@ -15,13 +15,12 @@
     <div class="container">
     
     <div class="map-overlay-wrapper">
-      <div id="rightMenu" style="display: block">
+      <div id="rightMenu" style="display: none">
       <div class="menu">
        <ul>
         <li onclick="toggleMarker(fotball)">Fotballen</li>
         <li onclick="toggleMarker(bryggen)">Bryggen</li>
-        <li onclick="toggleVisible(bryggenCard)">infoCard</li>
-        <li onclick="toggleBlur()">blur</li>
+        <li onclick="toggleVisible(bryggenCard), toggleBlur(map)">infoCard</li>
         <li onclick="getLocation()">Location</li>
         <li onclick="centerMap()">Center Map</li>
        </ul>

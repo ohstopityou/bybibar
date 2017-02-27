@@ -6,8 +6,10 @@ function toggleVisible(id) {
   }
 }
 
-function toggleBlur() {
-  var map = document.getElementById('map')
+function toggleBlur(id) {
+  console.log(id);
+  let map = document.getElementById('map')
+  console.log(map);
   if (map.style.filter == "blur(5px)") {
     map.style.filter="blur(0px)";
   } else {
@@ -16,19 +18,30 @@ function toggleBlur() {
 }
 
 function toggleMarker(id) {
+  console.log(id);
   if(id.getVisible() == true) {
     id.setVisible(false);
   } else {
     id.setVisible(true);
   }
 }
-                    
-document.getElementById('rightMenuButton').addEventListener("click", function() {
+
+var menubtn = document.getElementById('rightMenuButton');
+var mapId = document.getElementById('map')
+
+menubtn.addEventListener("click", function() {
   toggleVisible(rightMenu);
 });
 
-document.getElementById('map').addEventListener("click", function() {
-  toggleBlur();
+mapId.addEventListener("click", function() {
+  if (bryggenCard.style.display=="block"){
+    toggleBlur();
+    toggleVisible(bryggenCard);
+  }
 });
+
+//bryggen.addEventListener("click", function() {
+//  toggleVisible(rightMenu);
+//});
 
 //bryggen.addListener('click', toggleVisible('bryggenCard'));

@@ -1,5 +1,7 @@
+var center = {lat: 60.393, lng: 5.322};
+
 function initMap() {
-  center = {lat: 60.393, lng: 5.322};
+  
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: 15,
     center: center,
@@ -50,20 +52,19 @@ function initMap() {
         "stylers": [{"visibility": "off"}]
       }
     ]
-  });
+  }); //end new map
   
   fotball = new google.maps.Marker({
     position: {lat: 60.390222, lng: 5.321039},
     map: map,
-    store_id: 'fotball',
   });
 
   bryggen = new google.maps.Marker({
     position: {lat: 60.395271, lng: 5.325236},
     map: map,
-    store_id: 'bryggen',
+    id : 'bryggenId',
   });
-}
+} // end initMap
 
 function getLocation() {
   var infoWindow = new google.maps.InfoWindow({map: map});
