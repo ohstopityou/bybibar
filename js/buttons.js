@@ -1,9 +1,5 @@
-var btn = document.getElementById('rightMenuButton');
-var map = document.getElementById('map');
-                   
 function toggleVisible(id) {
-
-  if (id.style.display=='block'){
+  if (id.style.display == 'block'){
     id.style.display='none'
   } else {
     id.style.display='block'
@@ -11,13 +7,12 @@ function toggleVisible(id) {
 }
 
 function toggleBlur() {
-  mappi = document.getElementById('map').style;
-  if (mappi.filter=="blur(5px)") {
-    mappi.filter="blur(0px)";
+  var map = document.getElementById('map')
+  if (map.style.filter == "blur(5px)") {
+    map.style.filter="blur(0px)";
   } else {
-    mappi.filter="blur(5px)";
+    map.style.filter="blur(5px)";
   }
-  toggleVisible('bryggenCard');
 }
 
 function toggleMarker(id) {
@@ -28,12 +23,12 @@ function toggleMarker(id) {
   }
 }
                     
-btn.addEventListener("click", function() {
-  toggleVisible('rightMenu');
+document.getElementById('rightMenuButton').addEventListener("click", function() {
+  toggleVisible(rightMenu);
 });
 
-map.addEventListener("click", function() {
-  toggleBlur(map);
+document.getElementById('map').addEventListener("click", function() {
+  toggleBlur();
 });
 
 //bryggen.addListener('click', toggleVisible('bryggenCard'));
