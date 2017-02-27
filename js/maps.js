@@ -59,6 +59,7 @@ function initMap() {
     if (mapCard.style.display=="block"){
       toggleBlur();
       toggleVisible(mapCard);
+      noneVisible(excel);
       map.setCenter(center);
       map.setZoom(15);
     }
@@ -76,7 +77,6 @@ function initMap() {
     position: {lat: 60.395271, lng: 5.325236},
     map: map,
   });
-  console.log(bryggen);
   bryggen.addListener('click', function() {
     zoomMarker(bryggen);
   });

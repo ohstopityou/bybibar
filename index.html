@@ -23,15 +23,169 @@
         <li onclick="zoomMarker(vinyl)">Vinyl</li>
         <li onclick="getLocation()">Location</li>
         <li onclick="centerMap(center)">Reset Map</li>
+        <li onclick="toggleVisible(excel), toggleVisible(mapCard), noneVisible(rightMenu), toggleBlur()">excel</li>
        </ul>
       </div>
       </div>
       <div class="map-overlay" id="map-overlay">
-        <div class="card" id="mapCard" style="display: none">Info</div>
+        <div class="card" id="mapCard" style="display: block">
+          <table id="excel" cellspacing="0" style="display: block">
+	<tr>
+		<td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font face="Cambria">Mandag</font></td>
+		<td align="left" valign=bottom><font face="Cambria">Tirsdag</font></td>
+		<td align="left" valign=bottom><font face="Cambria">Onsdag</font></td>
+		<td align="left" valign=bottom><font face="Cambria">Torsdag</font></td>
+		<td align="left" valign=bottom><font face="Cambria">Fredag</font></td>
+		<td align="left" valign=bottom><font face="Cambria">Lørdag</font></td>
+		<td align="left" valign=bottom><font face="Cambria">Søndag</font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom><font face="Cambria">Aura</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="right" valign=bottom sdval="29" sdnum="1033;"><font face="Cambria">29</font></td>
+		<td align="right" valign=bottom sdval="29" sdnum="1033;"><font face="Cambria">29</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom><font face="Cambria">Hectors Hybel</font></td>
+		<td align="right" valign=bottom sdval="46" sdnum="1033;"><font face="Cambria">46</font></td>
+		<td align="right" valign=bottom sdval="46" sdnum="1033;"><font face="Cambria">46</font></td>
+		<td align="right" valign=bottom sdval="46" sdnum="1033;"><font face="Cambria">46</font></td>
+		<td align="right" valign=bottom sdval="46" sdnum="1033;"><font face="Cambria">46</font></td>
+		<td align="right" valign=bottom sdval="46" sdnum="1033;"><font face="Cambria">46</font></td>
+		<td align="right" valign=bottom sdval="46" sdnum="1033;"><font face="Cambria">46</font></td>
+		<td align="right" valign=bottom sdval="46" sdnum="1033;"><font face="Cambria">46</font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom><font face="Cambria">Kvarteret</font></td>
+		<td align="right" valign=bottom sdval="39" sdnum="1033;"><font face="Cambria">39</font></td>
+		<td align="right" valign=bottom sdval="47" sdnum="1033;"><font face="Cambria">47</font></td>
+		<td align="right" valign=bottom sdval="47" sdnum="1033;"><font face="Cambria">47</font></td>
+		<td align="right" valign=bottom sdval="47" sdnum="1033;"><font face="Cambria">47</font></td>
+		<td align="right" valign=bottom sdval="47" sdnum="1033;"><font face="Cambria">47</font></td>
+		<td align="right" valign=bottom sdval="47" sdnum="1033;"><font face="Cambria">47</font></td>
+		<td align="right" valign=bottom sdval="47" sdnum="1033;"><font face="Cambria">47</font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom><font face="Cambria">Inside</font></td>
+		<td align="right" valign=bottom sdval="49" sdnum="1033;"><font face="Cambria">49</font></td>
+		<td align="right" valign=bottom sdval="49" sdnum="1033;"><font face="Cambria">49</font></td>
+		<td align="right" valign=bottom sdval="49" sdnum="1033;"><font face="Cambria">49</font></td>
+		<td align="right" valign=bottom sdval="49" sdnum="1033;"><font face="Cambria">49</font></td>
+		<td align="right" valign=bottom sdval="49" sdnum="1033;"><font face="Cambria">49</font></td>
+		<td align="right" valign=bottom sdval="49" sdnum="1033;"><font face="Cambria">49</font></td>
+		<td align="right" valign=bottom sdval="49" sdnum="1033;"><font face="Cambria">49</font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom><font face="Cambria">Febar</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="right" valign=bottom sdval="39" sdnum="1033;"><font face="Cambria">39</font></td>
+		<td align="right" valign=bottom sdval="69" sdnum="1033;"><font face="Cambria">69</font></td>
+		<td align="right" valign=bottom sdval="69" sdnum="1033;"><font face="Cambria">69</font></td>
+		<td align="right" valign=bottom sdval="69" sdnum="1033;"><font face="Cambria">69</font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom><font face="Cambria">Kontoret</font></td>
+		<td align="right" valign=bottom sdval="82" sdnum="1033;"><font face="Cambria">82</font></td>
+		<td align="right" valign=bottom sdval="82" sdnum="1033;"><font face="Cambria">82</font></td>
+		<td align="right" valign=bottom sdval="82" sdnum="1033;"><font face="Cambria">82</font></td>
+		<td align="right" valign=bottom sdval="82" sdnum="1033;"><font face="Cambria">82</font></td>
+		<td align="right" valign=bottom sdval="82" sdnum="1033;"><font face="Cambria">82</font></td>
+		<td align="right" valign=bottom sdval="82" sdnum="1033;"><font face="Cambria">82</font></td>
+		<td align="right" valign=bottom sdval="82" sdnum="1033;"><font face="Cambria">82</font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom><font face="Cambria">Brukbar</font></td>
+		<td align="right" valign=bottom sdval="75" sdnum="1033;"><font face="Cambria">75</font></td>
+		<td align="right" valign=bottom sdval="75" sdnum="1033;"><font face="Cambria">75</font></td>
+		<td align="right" valign=bottom sdval="75" sdnum="1033;"><font face="Cambria">75</font></td>
+		<td align="right" valign=bottom sdval="75" sdnum="1033;"><font face="Cambria">75</font></td>
+		<td align="right" valign=bottom sdval="90" sdnum="1033;"><font face="Cambria">90</font></td>
+		<td align="right" valign=bottom sdval="90" sdnum="1033;"><font face="Cambria">90</font></td>
+		<td align="right" valign=bottom sdval="90" sdnum="1033;"><font face="Cambria">90</font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom><font face="Cambria">Hulen</font></td>
+		<td align="right" valign=bottom sdval="52" sdnum="1033;"><font face="Cambria">52</font></td>
+		<td align="right" valign=bottom sdval="52" sdnum="1033;"><font face="Cambria">52</font></td>
+		<td align="right" valign=bottom sdval="52" sdnum="1033;"><font face="Cambria">52</font></td>
+		<td align="right" valign=bottom sdval="52" sdnum="1033;"><font face="Cambria">52</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="right" valign=bottom sdval="42" sdnum="1033;"><font face="Cambria">42</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom><font face="Cambria">Lille</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="right" valign=bottom sdval="25" sdnum="1033;"><font face="Cambria">25</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="right" valign=bottom sdval="25" sdnum="1033;"><font face="Cambria">25</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="right" valign=bottom sdval="29" sdnum="1033;"><font face="Cambria">29</font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom><font face="Cambria">No Stress</font></td>
+		<td align="right" valign=bottom sdval="62" sdnum="1033;"><font face="Cambria">62</font></td>
+		<td align="right" valign=bottom sdval="62" sdnum="1033;"><font face="Cambria">62</font></td>
+		<td align="right" valign=bottom sdval="62" sdnum="1033;"><font face="Cambria">62</font></td>
+		<td align="right" valign=bottom sdval="62" sdnum="1033;"><font face="Cambria">62</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom><font face="Cambria">Vaskeriet</font></td>
+		<td align="right" valign=bottom sdval="66" sdnum="1033;"><font face="Cambria">66</font></td>
+		<td align="right" valign=bottom sdval="66" sdnum="1033;"><font face="Cambria">66</font></td>
+		<td align="right" valign=bottom sdval="66" sdnum="1033;"><font face="Cambria">66</font></td>
+		<td align="right" valign=bottom sdval="66" sdnum="1033;"><font face="Cambria">66</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom><font face="Cambria">Klubb Kok</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="right" valign=bottom sdval="25" sdnum="1033;"><font face="Cambria">25</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom><font face="Cambria">Kaos</font></td>
+		<td align="right" valign=bottom sdval="34" sdnum="1033;"><font face="Cambria">34</font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom><font face="Cambria">Cafe Contra</font></td>
+		<td align="right" valign=bottom sdval="78" sdnum="1033;"><font face="Cambria">78</font></td>
+		<td align="right" valign=bottom sdval="62" sdnum="1033;"><font face="Cambria">62</font></td>
+		<td align="right" valign=bottom sdval="78" sdnum="1033;"><font face="Cambria">78</font></td>
+		<td align="right" valign=bottom sdval="78" sdnum="1033;"><font face="Cambria">78</font></td>
+		<td align="right" valign=bottom sdval="78" sdnum="1033;"><font face="Cambria">78</font></td>
+		<td align="right" valign=bottom sdval="78" sdnum="1033;"><font face="Cambria">78</font></td>
+		<td align="right" valign=bottom sdval="78" sdnum="1033;"><font face="Cambria">78</font></td>
+	</tr>
+</table>
+        </div>
       </div>
     </div>
     
-    <div id="map" style="filter: blur(0px)"></div>
+    <div id="map" style="filter: blur(5px)"></div>
     
     <script src="js/maps.js"></script>
     <script async defer
