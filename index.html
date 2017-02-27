@@ -18,16 +18,16 @@
       <div id="rightMenu" style="display: none">
       <div class="menu">
        <ul>
-        <li onclick="toggleMarker(fotball)">Fotballen</li>
-        <li onclick="toggleMarker(bryggen)">Bryggen</li>
-        <li onclick="toggleVisible(bryggenCard), toggleBlur(), toggleVisible(rightMenu)">infoCard</li>
+        <li onclick="zoomMarker(fotball)">Fotballen</li>
+        <li onclick="zoomMarker(bryggen)">Bryggen</li>
+        <li onclick="zoomMarker(vinyl)">Vinyl</li>
         <li onclick="getLocation()">Location</li>
-        <li onclick="centerMap()">Center Map</li>
+        <li onclick="centerMap(center)">Reset Map</li>
        </ul>
       </div>
       </div>
       <div class="map-overlay" id="map-overlay">
-        <div class="card" id="bryggenCard" style="display: none">Info</div>
+        <div class="card" id="mapCard" style="display: none">Info</div>
       </div>
     </div>
     

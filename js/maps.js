@@ -1,8 +1,8 @@
 var center = {lat: 60.393, lng: 5.322};
 
 function initMap() {
-  
-  map = new google.maps.Map(document.getElementById('map'), {
+  var map_container = document.getElementById('map');
+  var map_options = {
     zoom: 15,
     center: center,
     zoomControl: false,
@@ -52,43 +52,43 @@ function initMap() {
         "stylers": [{"visibility": "off"}]
       }
     ]
-  }); //end new map
+  }
+  
+  map = new google.maps.Map(map_container, map_options);
+  map.addListener("click", function() {
+    if (mapCard.style.display=="block"){
+      toggleBlur();
+      toggleVisible(mapCard);
+      map.setCenter(center);
+      map.setZoom(15);
+    }
+  });
   
   fotball = new google.maps.Marker({
     position: {lat: 60.390222, lng: 5.321039},
     map: map,
+  });
+  fotball.addListener('click', function() {
+    zoomMarker(fotball);
   });
 
   bryggen = new google.maps.Marker({
     position: {lat: 60.395271, lng: 5.325236},
     map: map,
   });
-  
+  console.log(bryggen);
   bryggen.addListener('click', function() {
-    map.setZoom(16);
-    map.setCenter(bryggen.getPosition());
-    toggleVisible(bryggenCard);
-    toggleBlur();
-  });
-
-  fotball.addListener('click', function() {
-    map.setZoom(16);
-    map.setCenter(fotball.getPosition());
-    toggleVisible(bryggenCard);
-    toggleBlur();
-    console.log("blurdone");
+    zoomMarker(bryggen);
   });
   
-  map.addListener("click", function() {
-    console.log("precheck mapclick")
-    if (bryggenCard.style.display=="block"){
-      toggleBlur();
-      toggleVisible(bryggenCard);
-      map.setCenter(center);
-      map.setZoom(15);
-    }
+  vinyl = new google.maps.Marker({
+  position: {lat: 60.395329, lng: 5.327527},
+  map: map,
   });
-} // end initMap
+  vinyl.addListener('click', function() {
+    zoomMarker(vinyl);
+  });
+}
 
 function getLocation() {
   var infoWindow = new google.maps.InfoWindow({map: map});
@@ -119,6 +119,16 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   'Error: Your browser doesn\'t support geolocation.');
 }
 
-function centerMap() {
-  map.setCenter(center);
+function centerMap(location) {
+  map.setCenter(location);
+  map.setZoom(15);
+}
+
+function zoomMarker(name) {
+  var pos = name.getPosition();
+  centerMap(pos);
+  toggleBlur();
+  noneVisible(rightMenu);
+  toggleVisible(mapCard);
+  map.setZoom(16);
 }

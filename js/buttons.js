@@ -1,5 +1,4 @@
 function toggleBlur() {
-  console.log("blurring");
   let map = document.getElementById('map')
   if (map.style.filter == "blur(5px)") {
     map.style.filter="blur(0px)";
@@ -22,6 +21,10 @@ function toggleVisible(id) {
   } else {
     id.style.display='block'
   }
+}
+
+function noneVisible(id) {
+  id.style.display='none'
 }
 
 var menubtn = document.getElementById('rightMenuButton');
