@@ -62,7 +62,31 @@ function initMap() {
   bryggen = new google.maps.Marker({
     position: {lat: 60.395271, lng: 5.325236},
     map: map,
-    id : 'bryggenId',
+  });
+  
+  bryggen.addListener('click', function() {
+    map.setZoom(16);
+    map.setCenter(bryggen.getPosition());
+    toggleVisible(bryggenCard);
+    toggleBlur();
+  });
+
+  fotball.addListener('click', function() {
+    map.setZoom(16);
+    map.setCenter(fotball.getPosition());
+    toggleVisible(bryggenCard);
+    toggleBlur();
+    console.log("blurdone");
+  });
+  
+  map.addListener("click", function() {
+    console.log("precheck mapclick")
+    if (bryggenCard.style.display=="block"){
+      toggleBlur();
+      toggleVisible(bryggenCard);
+      map.setCenter(center);
+      map.setZoom(15);
+    }
   });
 } // end initMap
 
