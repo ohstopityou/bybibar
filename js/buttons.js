@@ -1,22 +1,21 @@
 var btn = document.getElementById('rightMenuButton');
 var map = document.getElementById('map');
-
                    
 function toggleVisible(id) {
-  console.log(id);
-var style = document.getElementById(id).style;
-  if (style.display=='block'){
-    style.display='none'
+
+  if (id.style.display=='block'){
+    id.style.display='none'
   } else {
-    style.display='block'
+    id.style.display='block'
   }
 }
 
-function toggleBlur(id) {
-  if (id.style.filter==blur(4px)) {
-    id.style.filter="blur(0px)";
+function toggleBlur() {
+  mappi = document.getElementById('map').style;
+  if (mappi.filter=="blur(5px)") {
+    mappi.filter="blur(0px)";
   } else {
-    id.style.filter="blur(4px)";
+    mappi.filter="blur(5px)";
   }
   toggleVisible('bryggenCard');
 }

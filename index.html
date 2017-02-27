@@ -15,12 +15,13 @@
     <div class="container">
     
     <div class="map-overlay-wrapper">
-      <div id="rightMenu" style="display: none">
+      <div id="rightMenu" style="display: block">
       <div class="menu">
        <ul>
         <li onclick="toggleMarker(fotball)">Fotballen</li>
         <li onclick="toggleMarker(bryggen)">Bryggen</li>
-        <li onclick="toggleBlur(map)">infoCard</li>
+        <li onclick="toggleVisible(bryggenCard)">infoCard</li>
+        <li onclick="toggleBlur()">blur</li>
         <li onclick="getLocation()">Location</li>
         <li onclick="centerMap()">Center Map</li>
        </ul>
@@ -31,7 +32,7 @@
       </div>
     </div>
     
-    <div id="map" style="blur(0px)"></div>
+    <div id="map" style="filter: blur(0px)"></div>
     
     <script src="js/maps.js"></script>
     <script async defer
