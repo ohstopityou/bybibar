@@ -32,3 +32,9 @@ var menubtn = document.getElementById('rightMenuButton');
 menubtn.addEventListener("click", function() {
   toggleVisible(rightMenu);
 });
+
+function preventBehavior(e) {
+    e.preventDefault(); 
+};
+
+document.addEventListener("touchmove", preventBehavior, false);

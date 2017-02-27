@@ -61,6 +61,15 @@ header {
   height: 100%;
 }
 
+#centerIcon {
+  height: 45px;
+  width: 45px;
+  z-index: 10;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
 #rightMenu {
   position: relative;
   z-index: 10;
