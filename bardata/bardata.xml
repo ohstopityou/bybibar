@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<bars>
+  <bar>
+    <name>mannskor</name>
+    <street>hans tanks gate 3</street>
+    <beerprice>25</beerprice>
+    <wardrobe>yes</wardrobe>
+    <hansa>yes</hansa>
+    <entrancefee>0</entrancefee>
+    <agelimit>18</agelimit>
+    <posx>60.386335</posx>
+    <posy>5.331369</posy>
+  </bar>
+  <!--
+  <bar>
+    <name></name>
+    <street></street>
+    <beerprice></beerprice>
+    <wardrobe></wardrobe>
+    <hansa></hansa>
+    <entrancefee></entrancefee>
+    <agelimit></agelimit>
+    <posx></posx>
+    <posy></posy>
+  </bar>
+  -->
+</bars>
