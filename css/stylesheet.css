@@ -128,7 +128,8 @@ header {
 
 #excel td{
   width: 5%;
-  text-align: right;
+  text-align: center;
+  border: 1px solid black;
 }
 
 /*------media query--------*/
