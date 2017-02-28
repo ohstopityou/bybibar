@@ -31,13 +31,12 @@ function displayBlock(id) {
   id.style.display='block'
 }
 
+//disable touchmove page on mobile
+document.addEventListener("touchmove", preventBehavior, false);
+// window - > affects browser only, not webapp
 function preventBehavior(e) {
     e.preventDefault(); 
 };
-
-//disable touchmove page on mobile
-document.addEventListener("touchmove", preventBehavior);
-// window - > affects browser only, not webapp
 
 var menubtn = document.getElementById('rightMenuButton');
 menubtn.addEventListener("click", function() {
