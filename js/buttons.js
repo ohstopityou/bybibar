@@ -36,7 +36,8 @@ function preventBehavior(e) {
 };
 
 //disable touchmove page on mobile
-window.addEventListener("touchmove", preventBehavior);
+document.addEventListener("touchmove", preventBehavior);
+// window - > affects browser only, not webapp
 
 var menubtn = document.getElementById('rightMenuButton');
 menubtn.addEventListener("click", function() {
