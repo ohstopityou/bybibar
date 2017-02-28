@@ -27,12 +27,18 @@ function noneVisible(id) {
   id.style.display='none'
 }
 
+function displayBlock(id) {
+  id.style.display='block'
+}
+
 var menubtn = document.getElementById('rightMenuButton');
 
 menubtn.addEventListener("click", function() {
   toggleVisible(rightMenu);
 });
 
+
+//lock webpage on mobile
 function preventBehavior(e) {
     e.preventDefault(); 
 };

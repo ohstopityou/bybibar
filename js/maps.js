@@ -63,6 +63,7 @@ function initMap() {
       map.setCenter(center);
       map.setZoom(15);
     }
+    noneVisible(rightMenu);
   });
   
   fotball = new google.maps.Marker({
@@ -71,6 +72,7 @@ function initMap() {
   });
   fotball.addListener('click', function() {
     zoomMarker(fotball);
+    displayBlock(barInfo);
   });
 
   bryggen = new google.maps.Marker({
@@ -79,6 +81,7 @@ function initMap() {
   });
   bryggen.addListener('click', function() {
     zoomMarker(bryggen);
+    displayBlock(barInfo);
   });
   
   vinyl = new google.maps.Marker({
@@ -87,6 +90,7 @@ function initMap() {
   });
   vinyl.addListener('click', function() {
     zoomMarker(vinyl);
+    displayBlock(barInfo);
   });
 }
 

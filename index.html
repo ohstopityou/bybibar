@@ -18,28 +18,26 @@
     
     <div class="map-overlay-wrapper">
       <div id="rightMenu" style="display: none">
-      <div class="menu">
        <ul>
         <li onclick="zoomMarker(fotball)">Fotballen</li>
         <li onclick="zoomMarker(bryggen)">Bryggen</li>
         <li onclick="zoomMarker(vinyl)">Vinyl</li>
         <li onclick="getLocation()">Location</li>
-        <li onclick="toggleVisible(excel), toggleVisible(mapCard), noneVisible(rightMenu), toggleBlur()">excel</li>
+        <li onclick="toggleVisible(excel), toggleVisible(mapCard), noneVisible(rightMenu), toggleBlur(), noneVisible(barInfo)">excel</li>
        </ul>
-      </div>
       </div>
       <div class="map-overlay" id="map-overlay">
         <div class="card" id="mapCard" style="display: block">
           <table id="excel" cellspacing="0" style="display: block">
 	<tr>
 		<td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
-		<td align="left" valign=bottom><font face="Cambria">Mandag</font></td>
-		<td align="left" valign=bottom><font face="Cambria">Tirsdag</font></td>
-		<td align="left" valign=bottom><font face="Cambria">Onsdag</font></td>
-		<td align="left" valign=bottom><font face="Cambria">Torsdag</font></td>
-		<td align="left" valign=bottom><font face="Cambria">Fredag</font></td>
-		<td align="left" valign=bottom><font face="Cambria">Lørdag</font></td>
-		<td align="left" valign=bottom><font face="Cambria">Søndag</font></td>
+		<td align="left" valign=bottom><font face="Cambria">Man</font></td>
+		<td align="left" valign=bottom><font face="Cambria">Tir</font></td>
+		<td align="left" valign=bottom><font face="Cambria">Ons</font></td>
+		<td align="left" valign=bottom><font face="Cambria">Tor</font></td>
+		<td align="left" valign=bottom><font face="Cambria">Fre</font></td>
+		<td align="left" valign=bottom><font face="Cambria">Lør</font></td>
+		<td align="left" valign=bottom><font face="Cambria">Søn</font></td>
 	</tr>
 	<tr>
 		<td height="21" align="left" valign=bottom><font face="Cambria">Aura</font></td>
@@ -48,7 +46,6 @@
 		<td align="left" valign=bottom><font color="#000000"><br></font></td>
 		<td align="right" valign=bottom sdval="29" sdnum="1033;"><font face="Cambria">29</font></td>
 		<td align="right" valign=bottom sdval="29" sdnum="1033;"><font face="Cambria">29</font></td>
-		<td align="left" valign=bottom><font color="#000000"><br></font></td>
 		<td align="left" valign=bottom><font color="#000000"><br></font></td>
 		<td align="left" valign=bottom><font color="#000000"><br></font></td>
 	</tr>
@@ -170,6 +167,7 @@
 		<td align="left" valign=bottom><font color="#000000"><br></font></td>
 		<td align="left" valign=bottom><font color="#000000"><br></font></td>
 		<td align="left" valign=bottom><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom><font color="#000000"><br></font></td>
 	</tr>
 	<tr>
 		<td height="21" align="left" valign=bottom><font face="Cambria">Cafe Contra</font></td>
@@ -182,13 +180,18 @@
 		<td align="right" valign=bottom sdval="78" sdnum="1033;"><font face="Cambria">78</font></td>
 	</tr>
 </table>
+          <div id="barInfo" style="display: none">
+            <p>Bryggen Nightclub</p>
+            <img src="images/bryggen-bar.jpg">
+            <p>Pilspris: 99</p>
+            <p>Stengetid: 04:00</p>
+          </div>
         </div>
         <img id="centerIcon" src="images/center-icon.png" onclick="centerMap(center)">
-      </div>
+      </div><!-- Visible map overlay end -->
     </div><!-- Map overlay wrapper end -->
     
     <div id="map" style="filter: blur(5px)"></div>
-    
     <script src="js/maps.js"></script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwXNdRrn3e5i2y_CtZdqSE6sXSchlnhUc&callback=initMap">
