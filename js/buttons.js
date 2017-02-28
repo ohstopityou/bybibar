@@ -37,7 +37,6 @@ menubtn.addEventListener("click", function() {
   toggleVisible(rightMenu);
 });
 
-
 //lock webpage on mobile
 function preventBehavior(e) {
     e.preventDefault(); 
@@ -48,3 +47,12 @@ document.addEventListener("touchmove", preventBehavior, false);
 function hideAddressBar() {
   setTimeout(function() {window.scrollTo(0, 1);}, 0);
 }
+
+// When ready...
+window.addEventListener("load",function() {
+	// Set a timeout...
+	setTimeout(function(){
+		// Hide the address bar!
+		window.scrollTo(0, 1);
+	}, 0);
+});
