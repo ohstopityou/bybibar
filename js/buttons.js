@@ -31,21 +31,14 @@ function displayBlock(id) {
   id.style.display='block'
 }
 
-var menubtn = document.getElementById('rightMenuButton');
+function preventBehavior(e) {
+    e.preventDefault(); 
+};
 
+//disable touchmove page on mobile
+window.addEventListener("touchmove", preventBehavior);
+
+var menubtn = document.getElementById('rightMenuButton');
 menubtn.addEventListener("click", function() {
   toggleVisible(rightMenu);
-});
-
-
-
-document.addEventListener("touchmove", preventBehavior, false);
-
-// When ready...
-window.addEventListener("load",function() {
-	// Set a timeout...
-	setTimeout(function(){
-		// Hide the address bar!
-		window.scrollTo(0, 1);
-	}, 0);
 });
