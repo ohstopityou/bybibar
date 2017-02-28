@@ -44,10 +44,6 @@ function preventBehavior(e) {
 
 document.addEventListener("touchmove", preventBehavior, false);
 
-function hideAddressBar() {
-  setTimeout(function() {window.scrollTo(0, 1);}, 0);
-}
-
 // When ready...
 window.addEventListener("load",function() {
 	// Set a timeout...
