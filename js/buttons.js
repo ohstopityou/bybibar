@@ -32,7 +32,7 @@ function displayBlock(id) {
 }
 
 //disable touchmove page on mobile
-document.addEventListener("touchmove", preventBehavior, false);
+window.addEventListener("touchmove", preventBehavior, false);
 // window - > affects browser only, not webapp
 function preventBehavior(e) {
     e.preventDefault(); 
