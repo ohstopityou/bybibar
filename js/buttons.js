@@ -37,10 +37,7 @@ menubtn.addEventListener("click", function() {
   toggleVisible(rightMenu);
 });
 
-//lock webpage on mobile
-function preventBehavior(e) {
-    e.preventDefault(); 
-};
+
 
 document.addEventListener("touchmove", preventBehavior, false);
 
