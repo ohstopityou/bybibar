@@ -1,5 +1,5 @@
 function toggleBlur() {
-  let map = document.getElementById('map')
+  let map = document.getElementById('map');
   if (map.style.filter == "blur(5px)") {
     map.style.filter="blur(0px)";
   } else {
@@ -31,13 +31,13 @@ function displayBlock(id) {
   id.style.display='block'
 }
 
-//disable touchmove page on mobile
-window.addEventListener("touchmove", preventBehavior, false);
-// window - > affects browser only, not webapp
 function preventBehavior(e) {
     e.preventDefault(); 
 };
 
+//disable touchmove page on mobile
+window.addEventListener("touchmove", preventBehavior, false);
+x
 var menubtn = document.getElementById('rightMenuButton');
 menubtn.addEventListener("click", function() {
   toggleVisible(rightMenu);
