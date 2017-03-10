@@ -37,7 +37,7 @@ function preventBehavior(e) {
 
 //disable touchmove page on mobile
 window.addEventListener("touchmove", preventBehavior, false);
-x
+
 var menubtn = document.getElementById('rightMenuButton');
 menubtn.addEventListener("click", function() {
   toggleVisible(rightMenu);
